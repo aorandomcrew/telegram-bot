@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "Notification")
+@Table(name = "notification_task")
 public class Notification  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,8 +16,8 @@ public class Notification  {
     @Column(name = "text")
     private String text;
 
-    @Column(name = "date")
-    private LocalDateTime message_date;
+    @Column(name = "messageDate")
+    private LocalDateTime messageDate;
 
     public Long getId() {
         return id;
@@ -43,11 +43,11 @@ public class Notification  {
         this.text = text;
     }
 
-    public LocalDateTime getMessage_date() {
-        return message_date;
+    public LocalDateTime getMessageDate() {
+        return messageDate;
     }
 
-    public void setMessage_date(LocalDateTime message_date) {
-        this.message_date = message_date;
+    public void setMessageDate(LocalDateTime messageDate) {
+        this.messageDate = messageDate;
     }
 }
